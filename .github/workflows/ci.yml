@@ -32,5 +32,6 @@ jobs:
           git fetch origin
           git checkout html
           mv build/*.html .
+          git add .
           git commit -m "chore: :bento: update"
           git push
