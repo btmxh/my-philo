@@ -15,8 +15,6 @@ jobs:
           token: ${{secrets.PAT}}
       - name: Setup node
         uses: actions/setup-node@v3
-        with:
-          cache: npm
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
