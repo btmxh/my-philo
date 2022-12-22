@@ -1,5 +1,4 @@
 import glob
-import sys
 import os
 
 mds = glob.glob('*.md')
