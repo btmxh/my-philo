@@ -20,6 +20,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
+          python-version: '3.10'
           cache: 'pip'
       - name: Install markmap
         run: npm install -g markmap-cli
@@ -33,5 +34,5 @@ jobs:
           git checkout html
           mv build/*.html .
           git add .
-          git commit -m "chore: :bento: update"
+          git diff-index --quiet HEAD || git commit -m "chore: :bento: update"
           git push
