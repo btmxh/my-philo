@@ -27,6 +27,7 @@ jobs:
         run: python generator.py
       - name: Checkout and push to html branch
         run: |
+          git fetch origin
           git checkout html
           mv build/*.html .
           git commit -m "chore: :bento: update"
