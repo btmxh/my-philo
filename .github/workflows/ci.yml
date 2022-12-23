@@ -27,13 +27,18 @@ jobs:
         run: npm install -g markmap-cli
       - name: Run generator.py
         run: python generator.py
-      - name: Checkout and push to html branch
+      - name: Specify git user config
         run: |
           git config user.email "<>"
           git config user.name "github-actions[bot]"
+      - name: Checkout to html branch
+        run: |
           git fetch origin
           git checkout html
-          mv build/*.html .
-          git add .
-          git diff-index --quiet HEAD || git commit -m "chore: :bento: update"
+      - name: Update files
+        run: mv build/*.html .
+      - name: Make commit to html branch
+        run: |
+          git add -A
+          git commit -m "chore: :bento: update" || true
           git push
