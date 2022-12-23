@@ -12,3 +12,4 @@
 - th: thể hiện
 - tg: thế giới
 - tgt: trực tiếp hoặc gián tiếp
+- tns: trong tgian và kgian
