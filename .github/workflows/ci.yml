@@ -8,6 +8,8 @@ on:
 jobs:
   main:
     runs-on: ubuntu-20.04
+    container: 
+      image: pandoc/core:2.9
     steps:
       - name: Checkout sources
         uses: actions/checkout@v3

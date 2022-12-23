@@ -5,7 +5,13 @@ mds = glob.glob('*.md')
 links = ""
 for md in mds:
     html = md[:-3] + ".html"
-    os.system(f'markmap {md} -o build/{html}')
+    with open(md, 'r', encoding='utf-8') as f:
+        content = f.readlines()
+    if 'pandoc: true' in content[1]:
+        # hacky af but idc
+        os.system(f'pandoc --standalone -c style.css {md} -o build/{html}')
+    else:
+        os.system(f'markmap {md} -o build/{html} --no-open')
     links += f'<li><a href="{html}">{md[:-3]}</a></li>'
 
 indexhtml = f'''<!DOCTYPE html>
