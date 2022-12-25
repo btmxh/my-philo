@@ -2,6 +2,7 @@ import glob
 import os
 
 mds = glob.glob('*.md')
+mds.sort()
 links = ""
 for md in mds:
     html = md[:-3] + ".html"
