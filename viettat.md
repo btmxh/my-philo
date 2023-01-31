@@ -13,3 +13,8 @@
 - tg: thế giới
 - tgt: trực tiếp hoặc gián tiếp
 - tns: trong tgian và kgian
+- $\rightarrow$: tác động
+- $\leftrightarrow$: chuyển hóa
+- (::): là
+- kf: khắc phục
+- x10: kế thừa
